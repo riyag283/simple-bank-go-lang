@@ -16,8 +16,9 @@ jobs:
         env:
           POSTGRES_USER: root
           POSTGRES_PASSWORD: secret
-          POSTGRES_PORT: 54321
           POSTGRES_DB: simple_bank
+        ports:
+          - 5432:54321
         options: >-
           --health-cmd pg_isready
           --health-interval 10s
